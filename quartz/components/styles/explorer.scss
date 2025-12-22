@@ -29,12 +29,25 @@
 .explorer {
   display: flex;
   flex-direction: column;
-  overflow-y: hidden;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  max-height: none;
+
+  .explorer-content {
+    flex: 1;
+    overflow-y: auto;
+    max-height: none;
+  }
 
   min-height: 1.2rem;
   flex: 0 1 auto;
+
   &.collapsed {
     flex: 0 1 1.2rem;
+
     & .fold {
       transform: rotateZ(-90deg);
     }
